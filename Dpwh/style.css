@@ -890,6 +890,7 @@ border-radius: 30px;
 
 .service-item:hover {
 transform: translateY(-5px);
+cursor: pointer;
 }
 
 .service-item h3 {
