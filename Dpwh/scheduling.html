@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SCHEDULING</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div><a href="index.html">GOVPH</a></div>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="scheduling.html">Scheduling</a>
+    <a href="contactus.html">Contact Us</a>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner">
+    <a href="index.html">
+      <img src="dpwh-logo.png" alt="DPWH Logo">
+    </a> 
+    <div class="banner-text">
+      <h4 class="republic-text">REPUBLIC OF THE PHILIPPINES</h4>
+      <h2 class="department-text">DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS</h2>
+      <div class="slogan">RIGHT PROJECT, RIGHT COST, RIGHT QUALITY, RIGHT ON TIME, RIGHT PEOPLE</div>
+    </div>
+  </div>
+
+
+<!-- Calendar -->
+<div class="calendar-container">
+  <div class="calendar-nav">
+    <button id="prev-month" class="nav-button">←</button>
+    <h1 id="current-month">May 2025</h1>
+    <button id="next-month" class="nav-button">→</button>
+  </div>
+  
+  <div class="calendar-header">
+    <div>SUN</div>
+    <div>MON</div>
+    <div>TUE</div>
+    <div>WED</div>
+    <div>THU</div>
+    <div>FRI</div>
+    <div>SAT</div>
+  </div>
+  
+  <div id="calendar-grid" class="calendar-grid">
+    <!-- Calendar days will be populated by JavaScript -->
+  </div>
+</div>
+
+<div class="scheduling-wrapper">
+  <!-- Booking Form on Left -->
+  <div class="booking-form-container">
+    <h2 class="form-title">Schedule an Appointment</h2>
+    
+    <form id="appointment-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Select Service</label>
+          <select id="service" class="form-control" required>
+            <option value="" disabled selected>Choose a service</option>
+            <option value="permit">Building Permit Application</option>
+            <option value="inspection">Request Inspection</option>
+            <option value="consultation">Technical Consultation</option>
+            <option value="complaint">File Complaint</option>
+            <option value="other">Other Services</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="selected-date">Selected Date</label>
+          <input type="text" id="selected-date" class="form-control" readonly required>
+        </div>
+        <div class="form-group">
+          <label for="time">Preferred Time</label>
+          <select id="time" class="form-control" required>
+            <option value="" disabled selected>Select a time</option>
+            <option value="9:00">9:00 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="13:00">1:00 PM</option>
+            <option value="14:00">2:00 PM</option>
+            <option value="15:00">3:00 PM</option>
+            <option value="16:00">4:00 PM</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="message">Additional Details</label>
+          <textarea id="message" class="form-control" placeholder="Please provide any additional information about your appointment"></textarea>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <button type="submit" class="send-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logos">
+        <a href="index.html" class="footer-logo">
+          <img src="dpwh-logo.png" alt="Logo 1">
+        </a>
+        <a href="#" class="footer-logo">
+          <img src="1tslogo.png" alt="Logo 2">
+        </a>
+        <a href="#" class="footer-logo">
+          <img src="2foilogo.png" alt="Logo 3">
+        </a>
+        <a href="#" class="footer-logo">
+          <img src="3bplogo.png" alt="Logo 4">
+        </a>
+        <a href="#" class="footer-logo">
+          <img src="4dpslogo.png" alt="Logo 5">
+        </a>
+      </div>
+      
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="scheduling.html">Scheduling</a>
+        <a href="contactus.html">Contact Us</a>
+      </div>
+      
+      <div class="footer-copyright">
+        <div class="footer-info-columns">
+          <div class="footer-info-column">
+            <h3>REPUBLIC OF THE PHILIPPINES</h3>
+            <p>All content is in the public domain unless otherwise stated.</p>
+          </div>
+          
+          <div class="footer-info-column">
+            <h3>ABOUT GOVPH</h3>
+            <p>Learn more about the Philippine government, its structure, how government works and the people behind it.</p>
+            <ul>
+              <li><a href="#">GOV.PH</a></li>
+              <li><a href="#">Open Data Portal</a></li>
+              <li><a href="#">Official Gazette</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-info-column">
+            <h3>GOVERNMENT LINKS</h3>
+            <ul>
+              <li><a href="https://president.gov.ph/" target="_blank">Office of the President</a></li>
+              <li><a href="https://main.ovp.gov.ph/" target="_blank">Office of the Vice President</a></li>
+              <li><a href="https://web.senate.gov.ph/" target="_blank">Senate of the Philippines</a></li>
+              <li><a href="https://www.congress.gov.ph/" target="_blank">House of Representatives</a></li>
+              <li><a href="https://sc.judiciary.gov.ph/" target="_blank">Supreme Court</a></li>
+              <li><a href="https://ca.judiciary.gov.ph/" target="_blank">Court of Appeals</a></li>
+              <li><a href="https://sb.judiciary.gov.ph/" target="_blank">Sandiganbayan</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+  </body>
+  </html>
